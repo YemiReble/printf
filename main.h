@@ -1,30 +1,49 @@
-#ifndef MAIN_H
-#define MAIN_N
+#ifndef _PRINTF_H_
+#define _PRINTF_H_
+
+#define BUFSIZE 1024
+
+/* Importing Libraries */
 
 #include <stdio.h>
 #include <unistd.h>
-#include <stdarg.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
-int _printf(const char *formart, ...);
-int (*check_specifier(const char*))(va_list);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_mod(va_list args);
-int print_integer(va_list args);
-int print_dec(va_list args);
-
-
+/* Type Definitions */
 
 /**
-  * struct func - structure for specifier to printer
-  * @t: character to compare
-  * @f: function to handle printing
-  */
-typedef struct func
-{
-	char *t;
-	int (*f)(va_list);
-} func_t;
+ * struct printer - structure for printing various types
+ * @symbol: type to print
+ * @func_t: function to print
+ */
 
-#endif
+typedef struct printer
+{
+	const char symbol;
+	int (*func_t)(va_list);
+} printer_t;
+
+/* Function Prototypes */
+
+int _write(char c);
+int _printf(const char *format, ...);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(__attribute__((unused))va_list args);
+int print_i(va_list args);
+int print_d(va_list args);
+int (*specifier(const char s))(va_list);
+int print_integer(va_list args);
+int print_decimal(va_list args);
+int binary_recursive(unsigned int num, int len);
+int print_binary(va_list args);
+int print_unint(va_list args);
+int print_octal(va_list args);
+int rot13(va_list args);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *rev_str(char *s);
+int print_reversed(va_list args);
+int (*func_t)(va_list);
+
+#endif /* _PRINTF_H_ */
