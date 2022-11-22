@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * function - this is a function that holds the specifier of _printf\
+  * check_specifier - this is a function that holds the specifier of _printf\
   * as per ALX specification.
   * @format: the secifier character (char *)
   *
@@ -20,7 +20,7 @@ int (*check_specifier(const char *format))(va_list)
 		{"d", print_dec},
 		{NULL, NULL}};
 
-	for (i = 0; array[i].t !=NULL; i++)
+	for (i = 0; array[i].t != NULL; i++)
 	{
 		if (*(array[i].t) == *format)
 		{
