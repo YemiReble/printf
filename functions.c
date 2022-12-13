@@ -2,7 +2,7 @@
 
 /**
  * print_char - Print characters (%c)
- * @arg_list: Stores a list of characters
+ * @args: Stores a list of characters
  *
  * Return: num of characters printed
  */
@@ -15,7 +15,7 @@ int print_char(va_list args)
 
 /**
 * print_string - print string (%s)
-* @arg_list: Stores a list of characters
+* @args: Stores a list of characters
 * Return: num of parameters printed
 */
 
@@ -37,7 +37,7 @@ int print_string(va_list args)
 
 /**
  * print_percent - function to print %
- * @arguments: unused
+ * @args: unused
  *
  * Return: always 1
  */
@@ -53,7 +53,7 @@ int print_percent(__attribute__((unused))va_list args)
 
 /**
  * print_integer - prints an integer
- * @arguments: integer to print
+ * @args: integer to print
  *
  * Return: number of chars and digits printed
  */
@@ -97,7 +97,7 @@ int print_integer(va_list args)
 
 /**
  * print_decimal - print a decimal
- * @arguments: decimal to print
+ * @args: decimal to print
  *
  * Return: number of characters and digits printed
  */
