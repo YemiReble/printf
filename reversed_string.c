@@ -53,7 +53,7 @@ char *rev_string(char *s)
 
 /**
  * print_reversed - Calls a function to reverse and print a string
- * @arg: Argument passed to the function
+ * @args: Argument passed to the function
  * Return: The amount of characters printed
  */
 
