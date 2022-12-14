@@ -19,7 +19,7 @@ int binary_recursive(unsigned int num, int len)
 
 /**
  * print_binary - convert unsigned int to binary
- * @arguments: int to convert
+ * @args: int to convert
  *
  * Return: integer
  */
